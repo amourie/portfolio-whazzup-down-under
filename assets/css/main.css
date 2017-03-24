@@ -347,6 +347,9 @@ footer .hashtag {
     margin: 0 auto;
     height: 180px;
     }
+    footer img {
+      width: 40px;
+    }
 }
 @media (min-width: 769px) and (max-width: 992px){
     .header h1 {
