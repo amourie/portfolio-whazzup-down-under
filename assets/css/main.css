@@ -14,7 +14,7 @@ body {
 /*** HEADER *****/
 
 .jumbotron {
-    background-color: #f7983c;
+    background-color: #5b6269;
     margin-top: 35px;
 }
 .jumbotron h1,
@@ -29,16 +29,16 @@ body {
 }
 .header {
     position: relative;
-    background-color: #45505b;
+    background-color: #000;
     border-bottom: solid 10px #e78f2e;
     margin: 0 2vw 0 0;
     position: relative;
     top: 3px;
     width: 100vw;
-    height: 240px;
+    height: 250px;
+    display: table;
 }
-.header-img  {
-  height: 220px;
+.header img  {
   position: relative;
   top: 20px;
 }
@@ -46,10 +46,16 @@ body {
     color: #fff;
     font-size: 7em;
     margin: 0 auto;
+
     text-align: center;
-    text-shadow: 2px 2px #f7983c;
     text-transform: uppercase;
-    line-height: 15vw;
+
+    position: relative;
+    height: 250px;
+    top: 20px;
+
+
+
 }
 
 /*** EQUALIZE COLUMNS ***/
@@ -84,11 +90,11 @@ h6,
 .jumbotron p {
     font-family: 'Oswald', sans-serif;
 }
-
 h1 {
-    font-size: 1.4em;
+    font-size: 2.4em;
     margin-bottom: 250x;
-
+    text-transform: uppercase;
+    color: #000;
 }
 h2 {
     margin-top: 0px;
@@ -98,19 +104,26 @@ h2 {
 .jumbotron h1 {
   font-size: 2.3em;
 }
-/**** ITEM CONTAINER ***/
+.jumbotron p {
+  color: #fff;
+}
 
+a {
+  color: #cacccd;
+}
+a:hover {
+  color: #c9cbcc;
+}
+/**** ITEM CONTAINER ***/
 .item-container {
-    background-color: #efefef;
+    background-color: #e3e6e7;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 10px;
     min-height: 400px;
     max-height: 400px;
-
+    display: block;
     overflow: hidden;
-
-
 }
 .item-container img {
     margin-bottom: 10px;
@@ -122,22 +135,20 @@ h2 {
 }
 .item-container p {
     font-size: 0.95em;
-    color: #797979;
+    color: #2c3034;
     text-align: justify;
 }
-.item-container a h2 {
-    color: #004787;
+.item-container a{
+    color: #2c3034;
 }
 .item-container a:hover {
-    text-decoration: none;
+  text-decoration: none;
+  color: #5b6b7a;
 }
-.item-container a h2:hover,
-.item-container a h2:hover {
-    color: #7b9227;
-    text-decoration: none;
+.item-container img:hover {
+    opacity: 0.9;
 }
 /*** BUTTON STYLES ***/
-
 .btn {
     padding: 15px;
     color: #fff;
@@ -240,12 +251,11 @@ footer {
     font-size: 1.1em;
     font-weight: bold;
     color: #FFF;
-
     padding-bottom: 30px;
-
     line-height: 130px;
     text-align: center;
-    background-color: #45505b;
+    background-color: #050300;
+    margin-top: 20px;
 }
 footer img icon {
     height: 100px;
@@ -261,17 +271,14 @@ footer img.rightIcon {
 footer p {
   display: inline;
 }
-footer a {
-  color: #FFF;
-}
-footer a:hover {
-  color: #FFF;
+footer .hashtag {
+  text-transform: uppercase;
 }
 /*** SOCIAL BUTTONS ***/
 
 .social-block {
-    margin-bottom: 20px;
-    margin-top: 20px;
+
+    margin-top: 40px;
     width: 100%;
     height: 60px;
     color: #FFF;
@@ -331,14 +338,35 @@ footer a:hover {
     }
     .header h1 {
         padding: 20px 0px;
-        font-size: 3.4em;
+        font-size: 3.7em;
         display: block;
         vertical-align: middle;
         line-height: 100%;
     }
-}
-@media (max-width: 420px) {
-    .header h1 {
-        font-size: 3em;
+    .header img {
+    margin: 0 auto;
+    height: 180px;
     }
 }
+@media (min-width: 769px) and (max-width: 992px){
+    .header h1 {
+        font-size: 4.5em;
+    }
+}
+@media (min-width: 993px){
+    .header h1 {
+        font-size: 6.5em;
+    }
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
