@@ -26,13 +26,13 @@ var displayDiv = document.getElementById(contentDiv);
             var numToDisplay = 9;
             if(data.status == 'ok'){
 
-                var output = '<h1>'+data.feed.title+'</h1>';
+                var output = '<h1 class="feedTitle">'+data.feed.title+'</h1>';
 
                 for(var i=0;i<numToDisplay;++i){
                       output += '<a href="' + data.items[i].link + '" target="_blank">';
-                      output+= '<div class="item-container col-lg-4 col-md-6 col-sm-6 col-xs-12"><h2>' + data.items[i].title + '</h2>';
+                      output+= '<div class="item-container col-lg-4 col-md-6 col-sm-6 col-xs-12"><div class="item-container-inner"><h2>' + data.items[i].title + '</h2>';
                       output+= '<img src="' + data.items[i].enclosure.link + '" />';
-                      output += '</a><p>' + data.items[i].description + '<p></div>';
+                      output += '</a><p>' + data.items[i].description + '<p></div></div>';
                       output += '</a>';
 
                 }//for

@@ -58,21 +58,6 @@ body {
 
 }
 
-/*** EQUALIZE COLUMNS ***/
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-}
-.row.is-flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-.row.is-flex > [class*='col-'] {
-    display: flex;
-    flex-direction: column;
-}
 /* ICONS */
 
 .fa {
@@ -92,9 +77,15 @@ h6,
 }
 h1 {
     font-size: 2.4em;
-    margin-bottom: 250x;
+
     text-transform: uppercase;
     color: #000;
+    padding: 8px;
+
+}
+h1.feedTitle {
+  margin: 6px;
+  background-color: #a6a6a7;
 }
 h2 {
     margin-top: 0px;
@@ -116,14 +107,18 @@ a:hover {
 }
 /**** ITEM CONTAINER ***/
 .item-container {
-    background-color: #e3e6e7;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
-    min-height: 400px;
-    max-height: 400px;
+    background-color: #FFF;
+    margin: 0px;
+    padding: 0px;
     display: block;
     overflow: hidden;
+}
+.item-container-inner {
+  background-color: #e7e7e7;
+  padding: 15px;
+  margin: 7px;
+  min-height: 400px;
+  max-height: 400px;
 }
 .item-container img {
     margin-bottom: 10px;
@@ -275,103 +270,88 @@ footer .hashtag {
   text-transform: uppercase;
 }
 /*** SOCIAL BUTTONS ***/
-
 .social-block {
-
-    margin-top: 40px;
-    width: 100%;
-    height: 60px;
-    color: #FFF;
-    font-weight: bold;
-    line-height: 60px;
-    text-align: center;
+  margin-top: 40px;
+  width: 100%;
+  height: 60px;
+  color: #FFF;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
 }
 .social-block a {
-    color: #FFF;
-    text-transform: uppercase;
-    display: block;
-    width: 100%;
-    height: 100%;
+  color: #FFF;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .social-block span {
-    font-size: 1.2em;
-    display: inline-block;
-    height: 60px;
+  font-size: 1.2em;
+  display: inline-block;
+  height: 60px;
 }
 .social-block i {
-    margin-right: 15px;
-    display: inline-block;
-    height: 50px;
-    position: relative;
-    top: 10px;
+  margin-right: 15px;
+  display: inline-block;
+  height: 50px;
+  position: relative;
+  top: 10px;
 }
 .social-block:hover {
-    opacity: 0.95;
+  opacity: 0.95;
 }
 .social-block a:hover,
 .social-block a:active {
-    text-decoration: none;
+  text-decoration: none;
 }
 .social-block-fb {
-    background-color: #364c8e;
+  background-color: #364c8e;
 }
 .social-block-gp {
-    background-color: #ff4000;
+  background-color: #ff4000;
 }
 .social-block-tw {
-    background-color: #00a3d9;
+  background-color: #00a3d9;
 }
 /**** GLOBAL MARGINS & PADDING ****/
 
 .addMargins {
-    margin-right: 15px;
-    margin-left: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 /**** MEDIA QUERIES ***/
 
 @media (max-width: 768px) {
-    .jumbotron {
-        padding: 10px 15px;
+  .jumbotron {
+      padding: 10px 15px;
+  }
+  .header {
+    height: 150px;
+  }
+  .header h1 {
+      padding: 15px 0px;
+      font-size: 3.3em;
+      display: block;
+      vertical-align: middle;
+      line-height: 100%;
+  }
+  .header img {
+    position: relative;
+    left: -30px;
+    width: 150px;
     }
-    .header {
-      height: 150px;
-
+  footer img {
+    width: 40px;
     }
-    .header h1 {
-        padding: 20px 0px;
-        font-size: 3em;
-        display: block;
-        vertical-align: middle;
-        line-height: 100%;
-    }
-    .header img {
-      position: relative;
-      left: -30px;
-      width: 150px;
-    }
-    footer img {
-      width: 40px;
-    }
+  .item-container-inner {
+    height: auto;
+    max-height: 480px;
+    overflow: hidden;
+  }
 }
-@media (min-width: 769px) and (max-width: 992px){
+@media (min-width: 768px) and (max-width: 991px) {
     .header h1 {
-        font-size: 4.5em;
-    }
+        font-size: 4.7em;
+        }
 }
-@media (min-width: 993px){
-    .header h1 {
-        font-size: 6.5em;
-    }
-}
-
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { ... }
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { ... }
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { ... }
